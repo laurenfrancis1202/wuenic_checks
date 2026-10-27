@@ -24,17 +24,15 @@ check7d <- compare_combination_2vax(data, v1, v2) %>%
   filter(diff != 0)
 
 
+# filter for the DTP-IPV countries (so this works for all countries as well as a single country)
 check7d <- check7d %>%
+  filter(ISOCountryCode %in% comb_dtp3_ipvc_list) %>%
   mutate(check = "Cross-check IPVC and DTP3 (combination)") %>%
   select(check, everything())
 
 # add info on vaccine
 check7d_2 <- check7d %>%
   left_join(temp, by =c('ISOCountryCode' = 'iso3c'))
-
-# filter for the DTP-IPV countries
-check7d <- check7d %>%
-  filter(ISOCountryCode %in% comb_dtp3_ipvc_list)
 
 
 ## clean table ----

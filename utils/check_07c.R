@@ -22,7 +22,9 @@ v2 <- "dtp1"
 check7c <- compare_combination_2vax(data, v1, v2) %>% 
   filter(diff != 0)
 
+# filter for the DTP-IPV countries (so this works for all countries as well as a single country)
 check7c <- check7c %>%
+  filter(ISOCountryCode %in% comb_dtp1_ipv1_list) %>%
   mutate(check = "Cross-check IPV1 and DTP1 (combination)") %>%
   select(check, everything())
 
