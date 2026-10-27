@@ -1,23 +1,28 @@
-WUENIC Checks - Run during the draft session for individual countries, at the end of the draft session on all countries and at the end of the final session for all countries
-check 1: compare country-vaccine estimates, current yr vs previous yr
-check 2: compare coverage between current and previous revision
-check 3: cross-check => DTP3, Hib3, HepB3
-check 4: cross-check => PCVC, Pol3, RotaC against DTP3
-check 5: cross-check => DTP3, MCV1
-check 6: cross-check => MCV1, YFV
-check 7b: cross-check => DTP3, IPV1 (OPV-using countries)
-check 7c: cross-check => DTP1, IPV1 (DTP-IPV combination using countries)
-check 7d: cross-check => DTP3, IPVC (DTP-IPV combination using countries)
-check 8: cross-check => MCV1, MENGA
-check 9: compare admin denoms current yr vs prev yr
-check 10: WUENIC estimates is the same, but admin coverage differs for vaccines recommended at the same time [dtp3, pcvc, rotac; bcg, hepbb; mcv1, menga, yfv]
-check 11: dtp3 increased and pcvc decreased
-check 12: flag where DTP3 > DTP1
-check 13: flag where IPVC > IPV1
-check 14: flag where MCV2 > MCV1 [rev_yr]
-check 15: RCV1 != MCV1
-check 16 :: MENGA > MCV1 but admin MENGA <= MCV1
-check 17 :: YFV > MCV1 but admin YFV <= MCV1
-check 18 :: admin coverage is the same, but WUENIC differs for vaccines recommended at the same time [dtp3, pcvc, rotac; bcg, hepbb; mcv1, menga, yfv]
-check 19 :: flag cases where survey data show discrepancies between co-administered antigens while admin data show similar coverage (within 2pp) 
-check 50: compare draft and final wuenic estimates (final only, flag any differences)
+# WUENIC Checks
+
+Run during the draft session for individual countries, at the end of the draft session on all countries, and at the end of the final session for all countries.
+
+| Check | Description |
+|-------|-------------|
+| 1 | Compare country-vaccine estimates, current year vs previous year |
+| 2 | Compare coverage between current and previous revision |
+| 3 | Cross-check DTP3, Hib3, HepB3 |
+| 4 | Cross-check PCVC, Pol3, RotaC against DTP3 |
+| 5 | Cross-check DTP3, MCV1 |
+| 6 | Cross-check MCV1, YFV |
+| 7b | Cross-check DTP3, IPV1 (OPV-using countries) |
+| 7c | Cross-check DTP1, IPV1 (DTP-IPV combination using countries) |
+| 7d | Cross-check DTP3, IPVC (DTP-IPV combination using countries) |
+| 8 | Cross-check MCV1, MENGA |
+| 9 | Compare admin denominators, current year vs previous year |
+| 10 | WUENIC estimate is the same, but admin coverage differs for vaccines recommended at the same time (DTP3, PCVC, ROTAC; BCG, HepBB; MCV1, MENGA, YFV) |
+| 11 | DTP3 increased and PCVC decreased |
+| 12 | Flag where DTP3 > DTP1 |
+| 13 | Flag where IPVC > IPV1 |
+| 14 | Flag where MCV2 > MCV1 [rev_yr] |
+| 15 | RCV1 != MCV1 |
+| 16 | MENGA > MCV1 but admin MENGA <= MCV1 |
+| 17 | YFV > MCV1 but admin YFV <= MCV1 |
+| 18 | Admin coverage is the same, but WUENIC differs for vaccines recommended at the same time (DTP3, PCVC, ROTAC; BCG, HepBB; MCV1, MENGA, YFV) |
+| 19 | Flag cases where survey data show discrepancies between co-administered antigens while admin data show similar coverage (within 2pp) |
+| 50 | Compare draft and final WUENIC estimates (final only, flag any differences) |
