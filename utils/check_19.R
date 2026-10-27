@@ -23,6 +23,7 @@ ch19_pairs <- tribble(
   ~v1,    ~v2,
   "dtp3", "pcvc",
   "dtp3", "rotac",
+  "dtp3", "ipv1",
   "pcvc", "rotac",
   "dtp1", "ipv1"
 )
